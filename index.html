@@ -1122,7 +1122,7 @@
     const now = new Date();
     let year = now.getFullYear();
 
-    // Target date: Feb 23 (next occurrence)
+    
     let target = new Date(year, 1, 23, 0, 0, 0);
 
     if (now > target) {
@@ -1153,46 +1153,44 @@
 startCountdown();
 
 
-        // Navigation between pages
+      
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('data-target');
                 
-                // Hide all pages
+   
                 document.querySelectorAll('.page-section').forEach(section => {
                     section.classList.remove('active');
                 });
-                
-                // Show target page
+              
                 document.getElementById(targetId).classList.add('active');
-                
-                // Scroll to top
+              
                 window.scrollTo(0, 0);
             });
         });
         
-        // Smooth scrolling for navigation links
+        
         document.querySelectorAll('.scroll-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 
-                // If we're on the team page, go to home first
+                
                 if (!document.getElementById('home').classList.contains('active')) {
                     document.querySelectorAll('.page-section').forEach(section => {
                         section.classList.remove('active');
                     });
                     document.getElementById('home').classList.add('active');
                     
-                    // Wait for page transition then scroll
+                    
                     setTimeout(() => {
                         document.querySelector(targetId).scrollIntoView({
                             behavior: 'smooth'
                         });
                     }, 100);
                 } else {
-                    // Already on home page, just scroll
+                 
                     document.querySelector(targetId).scrollIntoView({
                         behavior: 'smooth'
                     });
@@ -1200,7 +1198,7 @@ startCountdown();
             });
         });
         
-        // Support button scrolls to footer
+        
         document.getElementById('support-btn').addEventListener('click', function() {
             document.querySelectorAll('.page-section').forEach(section => {
                 section.classList.remove('active');
@@ -1216,7 +1214,7 @@ startCountdown();
         
        
         
-        // Add animation to goal cards on scroll
+       
         const observerOptions = {
             threshold: 0.1
         };
@@ -1242,6 +1240,7 @@ startCountdown();
 </body>
 
 </html>
+
 
 
 
