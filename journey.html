@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey | ISC-DIP Turbo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #0a1128;
+    --dark-navy: #051024;
+    --electric-blue: #0066cc;
+    --gold: #ffcc00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--navy);
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: rgba(10,17,40,0.95);
+    border-bottom: 1px solid var(--electric-blue);
+    padding: 16px 0;
+}
+
+.header-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, var(--gold), var(--electric-blue));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.page-title h1 {
+    font-size: 3rem;
+}
+
+.page-title p {
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 80px auto 120px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--electric-blue),
+        var(--gold)
+    );
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 30px 40px;
+    position: relative;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--gold);
+}
+
+.timeline-item.left::after {
+    right: -9px;
+}
+
+.timeline-item.right::after {
+    left: -9px;
+}
+
+.timeline-content {
+    background: linear-gradient(145deg, var(--dark-navy), var(--navy));
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(0,102,204,0.35);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.year {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .timeline-item::after {
+        left: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">ISC-DIP TURBO</div>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</header>
+
+<section class="page-title">
+    <h1>Our Journey</h1>
+
+</section>
+
+<div class="timeline">
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <span class="year">September 2023</span>
+            <h3>The formation of Turbo</h3>
+            <p>The administration at ISC-DIP greenlit the formation of the school's first ever electric car team. This team became known as ISC-DIP Turbo led by 2 students of the class of 2025</p>
+        </div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-content">
+            <span class="year">March 2024</span>
+            <h3>First ever EVGP</h3>
+            <p>In 2024, team turbo was given the privilege to partake in the 2024 edition of the Electric Vehicle Grand Prix winning several awards</p>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <span class="year">September 2024</span>
+            <h3>Team Turbo began its second year of operation</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-content">
+            <span class="year">EVGP</span>
+            <h3>February 2025</h3>
+            <p>Under the leaders of 2024 team turbo was led to its second year in a row at evgp where many awards were once again won</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
